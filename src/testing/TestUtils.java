@@ -68,12 +68,12 @@ public class TestUtils extends Mod{
             loadSettings();
             Setup.init();
 
-            LoadedMod tu = mods.locateMod("test-utils");
+            LoadedMod tu = mods.locateMod("test-utils-u");
 
             Func<String, String> getModBundle = value -> bundle.get("mod." + value);
 
-            tu.meta.displayName = "[#FCC21B]" + test-utils-u.meta.displayName;
-            tu.meta.author = "[#FCC21B]" + test-utils-u.meta.author;
+            tu.meta.displayName = "[#FCC21B]" + tu.meta.displayName;
+            tu.meta.author = "[#FCC21B]" + tu.meta.author;
 
             StringBuilder tools = new StringBuilder(getModBundle.get(tu.meta.name + ".description"));
             tools.append("\n\n");
