@@ -1,8 +1,8 @@
 #the mod name as displayed in-game
-displayName: "Testing Utilities"
+displayName: "Testing Utilities Unlocked (FEV)"
 
 #the internal name of your mod
-name: "test-utils"
+name: "test-utils-ufev"
 
 #your name
 author: "MEEP of Faith"
@@ -11,7 +11,7 @@ author: "MEEP of Faith"
 main: "testing.TestUtils"
 
 #mod repo on github
-repo: MEEPofFaith/testing-utilities-java
+repo: ManuWar73/testing-utilities-unlocked
 
 #the mod description as seen in the mod dialog
 description: "Utilities for testing stuff in sandbox. (Load the game with this mod enabled for more info.)"
