@@ -85,13 +85,13 @@ public class TestUtils extends Mod{
             tu.meta.description = tools.toString();
 
             //Increase zoom range
-            renderer.minZoom = 0.667f; //Zoom out farther
-            renderer.maxZoom = 24f; //Get a closer look at yourself
+            renderer.minZoom = 0.3345f; //Zoom out farther
+            renderer.maxZoom = 48f; //Get a closer look at yourself
             Events.on(WorldLoadEvent.class, e -> {
                 //reset
                 hasProc = Groups.build.contains(b -> b.block.privileged);
-                renderer.minZoom = 0.667f;
-                renderer.maxZoom = 24f;
+                renderer.minZoom = 0.3345f;
+                renderer.maxZoom = 48f;
             });
             Events.run(Trigger.update, () -> {
                 //zomm range
@@ -188,11 +188,11 @@ public class TestUtils extends Mod{
     }
 
     public static boolean disableTeleport(){
-        return net.client() ? !Setup.on2r2t : disableCampaign();
+        return false;
     }
 
     public static boolean disableCampaign(){
-        return state.isCampaign() && !(OS.username.equals("MEEP") && settings.getBool("tu-meep-privileges"));
+        return false;
     }
 
     public static boolean click(){
