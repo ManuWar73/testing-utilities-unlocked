@@ -72,8 +72,8 @@ public class TestUtils extends Mod{
 
             Func<String, String> getModBundle = value -> bundle.get("mod." + value);
 
-            tu.meta.displayName = "[#FCC21B]" + tu.meta.displayName;
-            tu.meta.author = "[#FCC21B]" + tu.meta.author;
+            tu.meta.displayName = "[#FCC21B]" + test-utils-u.meta.displayName;
+            tu.meta.author = "[#FCC21B]" + test-utils-u.meta.author;
 
             StringBuilder tools = new StringBuilder(getModBundle.get(tu.meta.name + ".description"));
             tools.append("\n\n");
@@ -85,13 +85,13 @@ public class TestUtils extends Mod{
             tu.meta.description = tools.toString();
 
             //Increase zoom range
-            renderer.minZoom = 0.667f; //Zoom out farther
-            renderer.maxZoom = 24f; //Get a closer look at yourself
+            renderer.minZoom = 0.3345f; //Zoom out farther
+            renderer.maxZoom = 48f; //Get a closer look at yourself
             Events.on(WorldLoadEvent.class, e -> {
                 //reset
                 hasProc = Groups.build.contains(b -> b.block.privileged);
-                renderer.minZoom = 0.667f;
-                renderer.maxZoom = 24f;
+                renderer.minZoom = 0.3345f;
+                renderer.maxZoom = 48f;
             });
             Events.run(Trigger.update, () -> {
                 //zomm range
