@@ -100,8 +100,8 @@ public class TestUtils extends Mod{
                         renderer.minZoom = 1.5f;
                         renderer.maxZoom = 6f;
                     }else{
-                        renderer.minZoom = 0.667f;
-                        renderer.maxZoom = 24f;
+                        renderer.minZoom = 0.367f;
+                        renderer.maxZoom = 48f;
                     }
                 }
             });
@@ -179,12 +179,10 @@ public class TestUtils extends Mod{
             t.sliderPref("tu-lerp-time", 8, 0, 40, s -> Strings.autoFixed(s / 4f, 2) + " " + StatUnit.seconds.localized());
             t.pref(new Separator(8));
             t.pref(new ButtonSetting("tu-sounds", TUIcons.get(Icon.effect), () -> soundDialog.show()));
-
-            if(OS.username.equals("MEEP")){
-                t.pref(new Separator(8));
-                t.checkPref("tu-meep-privileges", true);
-                t.checkPref("tu-mobile-test", false);
-            }
+            t.pref(new Separator(8));
+            t.checkPref("tu-meep-privileges", true);
+            t.checkPref("tu-mobile-test", false);
+            
         });
 
         if(mobile) ui.settings.game.checkPref("console", true);
